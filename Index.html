@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>S.E.A - Sistema de Educação e Aprendizado</title>
+    <link rel="icon" href="Styles/Assets/logo.png" type="image/x-icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-image: url('wallpaper/foto.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        header {
+            background-color: rgba(0, 0, 50, 0.7);
+            padding: 1rem 2rem;
+        }
+
+        .nav-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+        .nav-list ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-item a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-item a:hover {
+            text-decoration: underline;
+        }
+
+        .btn-login {
+            background-color: #0077ff;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn-login:hover {
+            background-color: #005dd1;
+        }
+
+        main {
+            padding: 4rem 2rem;
+        }
+
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+        }
+
+        .txt-topo-site h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .txt-topo-site p {
+            font-size: 1.3rem;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .img-topo-site img {
+            max-width: 250px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .features {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 3rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .features h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            color: #00cfff;
+        }
+
+        .features ul {
+            list-style: none;
+            padding-left: 1rem;
+            line-height: 2;
+            font-size: 1.1rem;
+        }
+
+        .features ul li::before {
+            content: "🌊 ";
+        }
+
+        footer.rodape {
+            background-color: rgba(0, 0, 50, 0.8);
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <h1>🌊 S.E.A — Sistema de Educação e Aprendizado</h1>
+            </div>
+
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="sobre.php" class="nav-link">👨‍💻 About the Developer & Project</a></li>
+                </ul>
+            </div>
+
+            <a href="login.php" class="btn-login">Entrar</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="topo-do-site efeito-txt-topo">
+            <div class="interface">
+                <div class="flex">
+                    <div class="txt-topo-site">
+                        <h1>🌊 Bem-vindo ao S.E.A</h1>
+                        <p>
+                            O <strong>Sistema de Educação e Aprendizado (SEA)</strong> é sua nova maneira de conectar alunos, professores e a escola de forma simples, bonita e eficiente. A maré do futuro chegou! 🚀
+                        </p>
+                    </div>
+                    <div class="img-topo-site efeito-img-topo">
+                        <img src="img/logo.png" alt="Logo Sistema Escolar" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <h2>Por que usar o S.E.A? 🌊</h2>
+            <ul>
+                <li>Interface intuitiva e moderna para alunos e professores.</li>
+                <li>Sistema de turmas com códigos únicos e fáceis de usar.</li>
+                <li>Upload e download de atividades entre alunos e professores.</li>
+                <li>Customização de perfis com imagens.</li>
+                <li>Gestão de ocorrências em sala de aula.</li>
+                <li>Melhoras constantes e em pouco tempo.</li>
+                <li>Ambiente seguro e privado com acesso individual por login.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        &copy; 2025 🌊 SEA - Sistema de Educação e Aprendizado. Todos os direitos reservados.
+    </footer>
+
+</body>
+</html>

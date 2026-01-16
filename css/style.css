@@ -1,0 +1,490 @@
+/* Ajustes para sidebar e main-content no admin.php */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f7fc;
+  overflow-x: hidden; /* Evita scroll horizontal */
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #4c8bf5;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+.sidebar .logo {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.sidebar .logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  margin: 10px 0;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  width: 100%;
+  display: block;
+  transition: background 0.3s ease;
+  box-sizing: border-box;
+}
+
+.sidebar a:hover {
+  background-color: #3578e5;
+}
+
+.main-content {
+  margin-left: 250px;
+  padding: 30px 40px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #333;
+  max-width: calc(100% - 250px);
+  overflow-wrap: break-word;
+}
+
+.professor-header {
+  margin-bottom: 30px;
+}
+
+.professor-header h1 {
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.professor-header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Info blocks estilo cards */
+
+.info-blocks {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.info-block {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  flex: 1 1 250px;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #333;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.info-block i {
+  font-size: 3.5rem;
+  color: #4c8bf5;
+  margin-bottom: 12px;
+}
+
+.info-block.admins {
+  background-color: #ffe0b2;
+}
+
+.info-block.students {
+  background-color: #dcedc8;
+}
+
+.info-block.professors {
+  background-color: #e0f7fa;
+}
+
+/* Responsivo */
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+  .main-content {
+    margin-left: 200px;
+    padding: 20px;
+  }
+  .info-blocks {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* Estilo padrão para inputs e selects em formulários */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #4c8bf5;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    color: #333;
+    font-size: 1rem;
+}
+
+/* Estilo padrão para botões */
+button {
+    padding: 12px 20px;
+    background-color: #4c8bf5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #3578e5;
+    transform: translateY(-2px);
+}
+
+/* Estilo das listas de usuários */
+.user-list h2 {
+  font-size: 1.8rem;
+  color: #4c8bf5;
+  border-bottom: 3px solid #3578e5;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.user-list table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px; /* espaçamento vertical */
+  box-shadow: 0 4px 8px rgba(76, 139, 245, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+  table-layout: fixed; /* força largura fixa para colunas iguais */
+}
+
+.user-list thead tr {
+  background-color: #4c8bf5;
+  color: white;
+  text-align: left;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 10px 10px 0 0;
+}
+
+.user-list thead th,
+.user-list tbody td {
+  padding: 15px 20px;
+  vertical-align: middle; /* alinhamento vertical */
+  text-align: left; /* alinhamento horizontal texto */
+  word-break: break-word; /* quebra linha se necessário */
+}
+
+
+.user-list tbody tr {
+  background-color: #f9fbff;
+  transition: background-color 0.3s ease;
+  cursor: default;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+}
+
+.user-list tbody tr:hover {
+  background-color: #e6f0ff;
+  border-left: 4px solid #4c8bf5;
+  border-right: 4px solid #4c8bf5;
+}
+
+.user-list tbody td {
+  padding: 15px 20px;
+  font-size: 1rem;
+  color: #333;
+  vertical-align: middle;
+}
+
+/* Mensagem quando não tem usuários */
+.user-list p {
+  font-style: italic;
+  color: #777;
+  padding: 15px 0;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .user-list table, .user-list thead, .user-list tbody, .user-list th, .user-list td, .user-list tr {
+    display: block;
+  }
+  .user-list thead tr {
+    display: none;
+  }
+  .user-list tbody tr {
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(76, 139, 245, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+  }
+  .user-list tbody td {
+    padding-left: 50%;
+    position: relative;
+    text-align: left;
+  }
+  .user-list tbody td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    font-weight: 600;
+    color: #4c8bf5;
+  }
+}
+
+input[type="file"] {
+    border: 1px solid #ccc;
+    padding: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #f8f8f8;
+    transition: background-color 0.3s ease;
+}
+input[type="file"]:hover {
+    background-color: #e2e2e2;
+}
+
+input[type="date"] {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+/* (todo seu CSS existente da sidebar, inputs, etc permanece aqui) */
+
+.atividades-section h2 {
+  font-size: 2rem;
+  color: #4c8bf5;
+  border-bottom: 3px solid #3578e5;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.sem-atividades {
+  font-style: italic;
+  color: #777;
+  font-size: 1.1rem;
+}
+
+.atividades-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.atividade-card {
+  background: #f9fbff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(76, 139, 245, 0.12);
+  padding: 20px 25px;
+  transition: box-shadow 0.3s ease;
+  border-left: 6px solid #4c8bf5;
+}
+
+.atividade-card:hover {
+  box-shadow: 0 10px 18px rgba(76, 139, 245, 0.25);
+}
+
+.atividade-card header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 12px;
+}
+
+.atividade-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0;
+}
+
+.data-limite {
+  font-size: 0.9rem;
+  color: #e65100;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.descricao {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 18px;
+  white-space: pre-wrap;
+}
+
+.btn-arquivo {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #4c8bf5;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-arquivo i {
+  margin-right: 6px;
+}
+
+.btn-arquivo:hover {
+  background-color: #3578e5;
+}
+
+.atividade-card footer {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: #999;
+  text-align: right;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .atividades-lista {
+    gap: 15px;
+  }
+
+  .atividade-card {
+    padding: 15px 20px;
+  }
+
+  .atividade-card h3 {
+    font-size: 1.3rem;
+  }
+}
+
+.atividade-card {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.atividade-card:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.atividade-link {
+    color: #4c8bf5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.atividade-link:hover {
+    text-decoration: underline;
+}
+
+.data-limite {
+    color: #888;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    display: block;
+}
+
+.btn-arquivo {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #4c8bf5;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-arquivo:hover {
+    background-color: #3578e5;
+}
+
+.atividade-detalhes p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    margin-top: 15px;
+}
+
+.data-envio {
+    color: #777;
+    font-size: 0.9rem;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+.professor-nome {
+    font-size: 0.85rem;      /* texto menor */
+    color: #666666;          /* cor cinza escuro */
+    margin: 4px 0 0 0;       /* espaço pequeno em cima, nada nas laterais e embaixo */
+    text-align: left;        /* alinha à esquerda */
+    font-style: italic;      /* opcional: deixa em itálico para dar um toque discreto */
+    font-weight: 500;        /* peso intermediário */
+}
+
