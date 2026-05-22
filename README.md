@@ -57,8 +57,7 @@ It provides a centralized platform for:
 
 - HTML, CSS, JavaScript  
 - PHP  
-- MySQL / MariaDB  
-
+- MySQL
 ---
 
 ## 📂 Features
